@@ -284,53 +284,28 @@
     font-size: 3.8rem;
     font-weight: 950;
     color: #111827;
-    line-height: 1.15;
+    line-height: 0.9;
     letter-spacing: -0.02em;
     text-transform: uppercase;
 }
-@font-face {
-    font-family: 'Silent Brush';
-    src: url('fonts/SilentBrush.woff2') format('woff2'),
-         url('fonts/SilentBrush.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 .hero-title .highlight-blue {
-    /* Tukar ke font handwriting di sini: 'Caveat', 'Kalam', atau 'Permanent Marker' */
-    font-family: 'Silent Brush', cursive;
-    font-weight: 700;
-    font-size: 5.5rem; /* Besarkan sikit sebab font handwriting skala dia agak kecil */
+    font-weight: 900;
+    font-size: 6.0rem; /* Besarkan sikit sebab font handwriting skala dia agak kecil */
     font-style: italic;
-    
+        color: #0099ff;
+
     display: inline-block;
     position: relative;
-    padding: 0 6px;
+    margin-top: 6px;
+    padding: 0px;
 
-    /* Warna Gradient Biru */
-    background: linear-gradient(120deg, #1d4ed8 0%, #3b82f6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Garis Underline Aksen di bawah tulisan */
-.hero-title .highlight-blue::after {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: #3b82f6;
-    border-radius: 10px;
-    opacity: 0.7;
-    z-index: -1;
-    transform: rotate(-1.5deg); /* Sengetkan sikit ikut gaya tulisan tangan */
 }
 
 .hero-subtitle {
     font-size: 1.05rem;
     color: #4b5563;
-    margin-top: 12px;
+    margin-top: 20px;
     margin-bottom: 24px;
     max-width: 500px;
     font-weight: 500;
@@ -354,7 +329,7 @@
     width: 65px;
     height: 65px;
     border-radius: 8px;
-    border: 1px solid #111827;
+    border: 3px solid #111827;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,7 +357,7 @@
 }
 
 .hero-car-img {
-    width: 110%;
+    width: 620px;
     max-width: 620px;
     height: auto;
     object-fit: contain;
@@ -1556,7 +1531,7 @@
             </div>
 
             <div class="fleet-filters">
-                <button class="filter-btn active" onclick="filterFleet('all', event)" data-i18n="filter_all">Semua Model (17)</button>
+                <button class="filter-btn active" onclick="filterFleet('all', event)" data-i18n="filter_all">Semua Model (20)</button>
                 <button class="filter-btn" onclick="filterFleet('compact', event)" data-i18n="filter_compact">Compact & Hatchback</button>
                 <button class="filter-btn" onclick="filterFleet('sedan', event)" data-i18n="filter_sedan">Sedan</button>
                 <button class="filter-btn" onclick="filterFleet('mpv', event)" data-i18n="filter_mpv">MPV & SUV</button>
@@ -1569,7 +1544,7 @@
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Paling Jimat</span>
-                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80" alt="Perodua Viva">
+                        <img src="images/viva.png" alt="Perodua Viva">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -1585,7 +1560,7 @@
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Paling Laris</span>
-                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Perodua Axia">
+                        <img src="images/axia.png" alt="Perodua Axia">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -1601,7 +1576,7 @@
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Pilihan Utama</span>
-                        <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=800&q=80" alt="Perodua Myvi">
+                        <img src="images/myvi.png" alt="Perodua Myvi">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -1617,7 +1592,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Bonet Luas</span>
-                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Perodua Bezza">
+                        <img src="images/1.png" alt="Perodua Bezza">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -1633,7 +1608,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge">7 Seater</span>
-                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Perodua Alza">
+                        <img src="images/alza.png" alt="Perodua Alza">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -1649,7 +1624,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge">SUV / MPV</span>
-                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80" alt="Perodua Aruz">
+                        <img src="images/aruz.png" alt="Perodua Aruz">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -1665,7 +1640,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Sedan Selesa</span>
-                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80" alt="Proton Persona">
+                        <img src="images/persona.png" alt="Proton Persona">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -1682,7 +1657,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Popular Choice</span>
-                        <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=800&q=80" alt="Honda City">
+                        <img src="images/city.png" alt="Honda City">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Honda</span>
@@ -1698,7 +1673,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Jimat Minyak</span>
-                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Nissan Almera">
+                        <img src="images/almera.png" alt="Nissan Almera">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Nissan</span>
@@ -1714,7 +1689,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge">6 Seater</span>
-                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Proton Ertiga">
+                        <img src="images/ertiga.png" alt="Proton Ertiga">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -1730,7 +1705,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Familia MPV</span>
-                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80" alt="Toyota Avanza">
+                        <img src="images/avanza.png" alt="Toyota Avanza">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -1746,7 +1721,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Ekonomi</span>
-                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80" alt="Proton Saga">
+                        <img src="images/flx.png" alt="Proton Saga">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -1762,7 +1737,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge">MPV Besar</span>
-                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Proton Exora">
+                        <img src="images/exora.png" alt="Proton Exora">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -1778,7 +1753,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge">SUV Premium</span>
-                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80" alt="Proton X-70">
+                        <img src="images/x70.png" alt="Proton X-70">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -1795,7 +1770,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge">4x4 Heavy Duty</span>
-                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Toyota Hilux">
+                        <img src="images/hilux.png" alt="Toyota Hilux">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -1812,7 +1787,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge">New Model</span>
-                        <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=800&q=80" alt="Toyota Vios">
+                        <img src="images/vios.png" alt="Toyota Vios">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -1829,7 +1804,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge">VIP Luxury</span>
-                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Toyota Vellfire">
+                        <img src="images/vellfire.png" alt="Toyota Vellfire">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -1846,7 +1821,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge">VIP Luxury</span>
-                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Toyota Hiace">
+                        <img src="images/hiace.png" alt="Toyota Hiace">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -1863,7 +1838,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge">VIP Luxury</span>
-                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Toyota Hiace">
+                        <img src="images/starex.png" alt="Toyota Hiace">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Hyundai</span>
@@ -1880,7 +1855,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge">Sedan</span>
-                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Toyota Hiace">
+                        <img src="images/corolla.png" alt="Toyota Hiace">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -1928,10 +1903,10 @@
             </div>
         </div>
 
-  <!-- REVIEWS CAROUSEL CONTAINER -->
+<!-- REVIEWS CAROUSEL CONTAINER -->
 <div class="reviews-carousel-wrapper">
     <!-- BUTANG NAVIGASI SLIDER -->
-    <button class="slider-btn prev-btn" id="slideLeft" aria-label="Previous">
+    <button class="slider-btn prev-btn" id="slideLeft" onclick="scrollReviews('left')" aria-label="Previous">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
     </button>
     
@@ -2035,7 +2010,7 @@
 
     </div>
 
-    <button class="slider-btn next-btn" id="slideRight" aria-label="Next">
+<button class="slider-btn next-btn" id="slideRight" onclick="scrollReviews('right')" aria-label="Next">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
     </button>
 </div>
@@ -2183,73 +2158,134 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         // 1. DICTIONARY DUAL LANGUAGE (BM / EN)
-        const i18nData = {
-            ms: {
-                tagline: "KOI Partner Penang",
-                nav_home: "Utama",
-                nav_fleet: "Senarai Kereta",
-                nav_reviews: "Testimoni",
-                nav_contact: "Hubungi",
-                hero_badge: "Kadar Terendah • Penang 2026",
-                hero_title: "Sewa Kereta Mudah & Murah di <span>Penang</span>",
-                hero_subtitle: "Nikmati perjalanan selesa dengan tempahan pantas, kenderaan bersih, dan diskaun khas sewaan jangka panjang hingga 14 hari.",
-                calc_title: "Semak Kekosongan",
-                direct_rate: "Kadar Direct",
-                lbl_car: "Jenis Kereta",
-                lbl_start: "Tarikh Mula",
-                lbl_end: "Tarikh Tamat",
-                lbl_name: "Nama Penuh",
-                btn_submit: "Tempah Menerusi WhatsApp",
-                badge_airport_title: "Penghantaran Airport Percuma",
-                badge_airport_sub: "Servis terus ke Penang International Airport (PIA)",
-                fleet_tag: "Pilihan ",
-                fleet_title: "Katalog & Kadar Harga Kereta",
-                filter_all: "Semua Model (17)",
-                filter_compact: "Compact & Hatchback",
-                filter_sedan: "Sedan",
-                filter_mpv: "MPV & SUV",
-                filter_luxury: "Mewah & 4x4",
-                reviews_tag: "Testimoni",
-                reviews_title: "Pengalaman Pelanggan Kami",
-                contact_tag: "Hubungi Kami",
-                contact_title: "Lokasi & Talian Khidmat",
-                addr_title: "Alamat Utama",
-                phone_title: "Hotline Direct"
-            },
-            en: {
-                tagline: "KOI Partner Penang",
-                nav_home: "Home",
-                nav_fleet: "Car Fleet",
-                nav_reviews: "Reviews",
-                nav_contact: "Contact",
-                hero_badge: "Best Rates • Penang 2026",
-                hero_title: "Affordable Car Rental in <span>Penang</span>",
-                hero_subtitle: "Enjoy a smooth ride with clean vehicles, instant direct rates, and special long-term discounts up to 14 days.",
-                calc_title: "Check Availability",
-                direct_rate: "Direct Rates",
-                lbl_car: "Select Vehicle",
-                lbl_start: "Start Date",
-                lbl_end: "End Date",
-                lbl_name: "Full Name",
-                btn_submit: "Book via WhatsApp",
-                badge_airport_title: "Free Airport Delivery",
-                badge_airport_sub: "Direct delivery to Penang International Airport (PIA)",
-                fleet_tag: "Our Fleet",
-                fleet_title: "Car Fleet & Price Catalogue",
-                filter_all: "All Cars (17)",
-                filter_compact: "Compact & Hatchback",
-                filter_sedan: "Sedan",
-                filter_mpv: "MPV & SUV",
-                filter_luxury: "Luxury & 4x4",
-                reviews_tag: "Testimonials",
-                reviews_title: "What Our Customers Say",
-                contact_tag: "Contact Us",
-                contact_title: "Location & Hotline",
-                addr_title: "Primary Address",
-                phone_title: "Direct Hotline"
-            }
-        };
+const i18nData = {
+    ms: {
+        // --- NAVBAR ---
+        nav_home: "Utama",
+        nav_fleet: "Armada Kereta",
+        nav_features: "Kelebihan",
+        nav_reviews: "Testimoni",
+        nav_faq: "Soalan Lazim",
+        nav_contact: "Hubungi Kami",
+        nav_book_now: "Tempah Sekarang",
 
+        // --- HERO SECTION ---
+        hero_title: 'Sewa Kereta <span class="highlight-blue">Penang</span> Murah & Selesa',
+        hero_subtitle: "Nikmati perjalanan tanpa renyah dengan armada kereta bersih, diselenggara rapi, dan perkhidmatan penghantaran 24 jam.",
+        hero_btn_primary: "Lihat Kereta",
+        hero_btn_whatsapp: "Sewa Menerusi WhatsApp",
+
+        // --- FILTER & CAR FLEET ---
+        fleet_title: "Pilihan Armada Kereta Kami",
+        fleet_subtitle: "Pilih kenderaan yang sesuai dengan keperluan dan bajet anda.",
+        filter_all: "Semua Model",
+        filter_compact: "Compact & Hatchback",
+        filter_sedan: "Sedan",
+        filter_mpv: "MPV & SUV",
+        filter_luxury: "Mewah & 4x4",
+
+        // --- CAR CARD / SPECS ---
+        card_per_day: "/ hari",
+        card_seats: "Kerusi",
+        card_transmission: "Auto",
+        card_fuel: "Petronas/Shell",
+        card_btn_book: "Tempah Kereta Ini",
+        btn_load_more: "Lihat Banyak Lagi",
+
+        // --- FEATURES / KELEBIHAN ---
+        features_title: "Kenapa Pilih Perkhidmatan Kami?",
+        feat_1_title: "Harga Tanpa Cas Tersembunyi",
+        feat_1_desc: "Kadar sewaan yang telus. Apa yang anda lihat, itu yang anda bayar.",
+        feat_2_title: "Penghantaran Ke Lokasi",
+        feat_2_desc: "Kami hantar terus ke Lapangan Terbang Penang, Stesen Komuter, atau Hotel anda.",
+        feat_3_title: "Kereta Bersih & Diselenggara",
+        feat_3_desc: "Setiap kenderaan dibersihkan dan diservis berkala demi keselamatan anda.",
+        feat_4_title: "Bantuan Bantuan 24/7",
+        feat_4_desc: "Pasukan sokongan kami sentiasa sedia membantu anda pada bila-bila masa.",
+
+        // --- BOOKING FORM / CARI KERETA ---
+        form_title: "Semak Ketersediaan Kereta",
+        form_pickup_loc: "Lokasi Ambil",
+        form_dropoff_loc: "Lokasi Pulang",
+        form_pickup_date: "Tarikh Ambil",
+        form_return_date: "Tarikh Pulang",
+        form_car_type: "Jenis Kereta",
+        form_submit_btn: "Cari Kereta Sekarang",
+
+        // --- TESTIMONIALS ---
+        reviews_title: "Apa Kata Pelanggan Kami",
+        reviews_subtitle: "Ribuan pelanggan gembira telah menggunakan perkhidmatan sewa kereta kami.",
+
+        // --- FOOTER ---
+        footer_about: "Penyedia perkhidmatan sewa kereta terkemuka di Penang. Menawarkan pelbagai jenis kenderaan pada harga bajet dan mesra mesra pengguna.",
+        footer_quick_links: "Pautan Pantas",
+        footer_contact_info: "Maklumat Perhubungan",
+        footer_rights: "Hak Cipta Terpelihara."
+    },
+    en: {
+        // --- NAVBAR ---
+        nav_home: "Home",
+        nav_fleet: "Car Fleet",
+        nav_features: "Features",
+        nav_reviews: "Reviews",
+        nav_faq: "FAQ",
+        nav_contact: "Contact Us",
+        nav_book_now: "Book Now",
+
+        // --- HERO SECTION ---
+        hero_title: 'Best & Affordable <span class="highlight-blue">Penang</span> Car Rental',
+        hero_subtitle: "Enjoy a hassle-free journey with clean, well-maintained cars and 24/7 delivery services.",
+        hero_btn_primary: "View All Cars",
+        hero_btn_whatsapp: "Book via WhatsApp",
+
+        // --- FILTER & CAR FLEET ---
+        fleet_title: "Our Car Fleet",
+        fleet_subtitle: "Choose the perfect vehicle suited for your needs and budget.",
+        filter_all: "All Models",
+        filter_compact: "Compact & Hatchback",
+        filter_sedan: "Sedan",
+        filter_mpv: "MPV & SUV",
+        filter_luxury: "Luxury & 4x4",
+
+        // --- CAR CARD / SPECS ---
+        card_per_day: "/ day",
+        card_seats: "Seats",
+        card_transmission: "Auto",
+        card_fuel: "Petrol",
+        card_btn_book: "Book This Car",
+        btn_load_more: "Load More",
+
+        // --- FEATURES ---
+        features_title: "Why Choose Us?",
+        feat_1_title: "No Hidden Charges",
+        feat_1_desc: "Transparent rental rates. What you see is what you pay.",
+        feat_2_title: "Doorstep Delivery",
+        feat_2_desc: "We deliver directly to Penang Airport, Train Station, or your Hotel.",
+        feat_3_title: "Clean & Well-Maintained",
+        feat_3_desc: "Every vehicle is sanitized and regularly serviced for your safety.",
+        feat_4_title: "24/7 Roadside Support",
+        feat_4_desc: "Our dedicated support team is always ready to assist you anytime.",
+
+        // --- BOOKING FORM ---
+        form_title: "Check Car Availability",
+        form_pickup_loc: "Pickup Location",
+        form_dropoff_loc: "Dropoff Location",
+        form_pickup_date: "Pickup Date",
+        form_return_date: "Return Date",
+        form_car_type: "Car Type",
+        form_submit_btn: "Search Cars Now",
+
+        // --- TESTIMONIALS ---
+        reviews_title: "What Our Customers Say",
+        reviews_subtitle: "Thousands of happy drivers trust our rental services in Penang.",
+
+        // --- FOOTER ---
+        footer_about: "Leading car rental provider in Penang. Offering a wide range of budget-friendly and quality vehicles.",
+        footer_quick_links: "Quick Links",
+        footer_contact_info: "Contact Info",
+        footer_rights: "All Rights Reserved."
+    }
+};
         let currentLang = 'ms';
 
         function toggleLanguage() {
@@ -2492,6 +2528,45 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Sembunyikan butang selepas semua kereta dah dipaparkan
+            this.style.display = 'none';
+        });
+    }
+});
+
+// 8. SLIDER & LOAD MORE INITIALIZATION
+function scrollReviews(direction) {
+    const slider = document.getElementById('reviewsSlider');
+    if (!slider) return;
+
+    const scrollAmount = 340; // Jarak scroll setiap kali tekan
+
+    if (direction === 'left') {
+        slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+        slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Hidden car logic
+    const carCards = document.querySelectorAll('.car-card'); 
+    const loadMoreBtn = document.getElementById('loadMoreCarsBtn');
+    const limit = 9;
+
+    if (carCards.length <= limit) {
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+        return;
+    }
+
+    carCards.forEach((card, index) => {
+        if (index >= limit) {
+            card.classList.add('hidden-car');
+        }
+    });
+
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function () {
+            carCards.forEach(card => card.classList.remove('hidden-car'));
             this.style.display = 'none';
         });
     }
