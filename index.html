@@ -772,6 +772,115 @@
     margin-top: 32px;
     width: 100%;
 }
+
+/* ==========================================================================
+   GALLERY   SECTION
+   ========================================================================== */
+.customer-gallery-section {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.gallery-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  padding: 1rem 0.5rem;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome & Safari */
+}
+
+.carousel-card {
+  flex: 0 0 calc(33.333% - 1rem);
+  min-width: 260px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-card p {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #333333;
+  font-weight: 500;
+  margin: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.prev-btn {
+  left: -15px;
+}
+
+.next-btn {
+  right: -15px;
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 85%;
+  }
+
+  .prev-btn {
+    left: 5px;
+  }
+
+  .next-btn {
+    right: 5px;
+  }
+}
 /* ==========================================================================
    CTA BANNER SECTION
    ========================================================================== */
@@ -1368,7 +1477,7 @@
 
                     <a href="https://wa.me/60105606211" target="_blank" class="btn-whatsapp-pill">
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <span>WhatsApp</span>
+                        <span data-i18n="nav_whatsapp">WhatsApp</span>
                     </a>
                 </div>
             </header>
@@ -1399,8 +1508,8 @@
                             <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
                         </div>
                         <div class="feature-badge-text">
-                            <strong>HARGA</strong>
-                            <span>MURAH</span>
+                            <strong data-i18n="feat_badge_1_title">HARGA</strong>
+                            <span data-i18n="feat_badge_1_sub">MURAH</span>
                         </div>
                     </div>
 
@@ -1409,8 +1518,8 @@
                             <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C1.4 11.2 1 12 1 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
                         </div>
                         <div class="feature-badge-text">
-                            <strong>KERETA</strong>
-                            <span>TERBAIK</span>
+                            <strong data-i18n="feat_badge_2_title">KERETA</strong>
+                            <span data-i18n="feat_badge_2_sub">TERBAIK</span>
                         </div>
                     </div>
 
@@ -1419,8 +1528,8 @@
                             <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
                         </div>
                         <div class="feature-badge-text">
-                            <strong>SERVIS</strong>
-                            <span>TERBAIK</span>
+                            <strong data-i18n="feat_badge_3_title">SERVIS</strong>
+                            <span data-i18n="feat_badge_3_sub">TERBAIK</span>
                         </div>
                     </div>
                 </div>
@@ -1444,7 +1553,7 @@
                     </div>
                     <div>
                         <h3 data-i18n="calc_title">CARI & TEMPAH KERETA</h3>
-                        <p>Mudah • Pantas • Selamat</p>
+                        <p data-i18n="calc_subtitle">Mudah • Pantas • Selamat</p>
                     </div>
                 </div>
 
@@ -1502,7 +1611,7 @@
                     <!-- 4. Customer Name -->
                     <div class="form-group-item">
                         <label class="form-label" data-i18n="lbl_name">Nama Penuh</label>
-                        <input type="text" class="form-control-custom" id="custName" placeholder="Nama Anda" required>
+                        <input type="text" class="form-control-custom" id="custName" placeholder="Nama Anda" data-i18n-ph="ph_name" required>
                     </div>
 
                     <!-- 5. Submit CTA Button -->
@@ -1542,15 +1651,15 @@
                 <!-- 1. Perodua Viva -->
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Paling Jimat</span>
+                        <span class="car-tag-badge" data-i18n="tag_most_economical">Paling Jimat</span>
                         <img src="images/viva.png" alt="Perodua Viva">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
                         <h3 class="car-name">Viva</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 100</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Viva')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 100</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Viva')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1558,15 +1667,15 @@
                 <!-- 2. Perodua Axia -->
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Paling Laris</span>
+                        <span class="car-tag-badge" data-i18n="tag_best_seller">Paling Laris</span>
                         <img src="images/axia.png" alt="Perodua Axia">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
                         <h3 class="car-name">Axia</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 120</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Axia')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 120</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Axia')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1574,15 +1683,15 @@
                 <!-- 3. Perodua Myvi -->
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Pilihan Utama</span>
+                        <span class="car-tag-badge" data-i18n="tag_top_choice">Pilihan Utama</span>
                         <img src="images/myvi.png" alt="Perodua Myvi">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
                         <h3 class="car-name">Myvi</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 130</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Myvi')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 130</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Myvi')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1590,15 +1699,15 @@
                 <!-- 4. Perodua Bezza -->
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Bonet Luas</span>
+                        <span class="car-tag-badge" data-i18n="tag_spacious_boot">Bonet Luas</span>
                         <img src="images/1.png" alt="Perodua Bezza">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
                         <h3 class="car-name">Bezza</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 140</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Bezza')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 140</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Bezza')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1606,15 +1715,15 @@
                 <!-- 5. Perodua Alza (MPV) -->
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">7 Seater</span>
+                        <span class="car-tag-badge" data-i18n="tag_7_seater">7 Seater</span>
                         <img src="images/alza.png" alt="Perodua Alza">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
                         <h3 class="car-name">Alza MPV</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 170</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Alza (MPV)')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 170</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Alza (MPV)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1622,15 +1731,15 @@
                 <!-- 6. Perodua Aruz (MPV) -->
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">SUV / MPV</span>
+                        <span class="car-tag-badge" data-i18n="tag_suv_mpv">SUV / MPV</span>
                         <img src="images/aruz.png" alt="Perodua Aruz">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
                         <h3 class="car-name">Aruz</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 210</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Aruz (MPV)')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 210</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Perodua Aruz (MPV)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1638,7 +1747,7 @@
                 <!-- 7. Proton Persona -->
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Sedan Selesa</span>
+                        <span class="car-tag-badge" data-i18n="tag_comfortable_sedan">Sedan Selesa</span>
                         <img src="images/persona.png" alt="Proton Persona">
                     </div>
                     <div class="car-content">
@@ -1646,8 +1755,8 @@
                         <h3 class="car-name">Persona</h3>
 
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 140</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Proton Persona')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 140</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Proton Persona')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1655,15 +1764,15 @@
                 <!-- 8. Honda City -->
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Popular Choice</span>
+                        <span class="car-tag-badge" data-i18n="tag_popular_choice">Popular Choice</span>
                         <img src="images/city.png" alt="Honda City">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Honda</span>
                         <h3 class="car-name">City</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 150</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Honda City')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 150</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Honda City')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1671,15 +1780,15 @@
                 <!-- 9. Nissan Almera -->
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Jimat Minyak</span>
+                        <span class="car-tag-badge" data-i18n="tag_fuel_efficient">Jimat Minyak</span>
                         <img src="images/almera.png" alt="Nissan Almera">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Nissan</span>
                         <h3 class="car-name">Almera</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 140</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Nissan Almera')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 140</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Nissan Almera')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1687,15 +1796,15 @@
                 <!-- 10. Proton Ertiga (MPV) -->
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">6 Seater</span>
+                        <span class="car-tag-badge" data-i18n="tag_6_seater">6 Seater</span>
                         <img src="images/ertiga.png" alt="Proton Ertiga">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
                         <h3 class="car-name">Ertiga MPV</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 170</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Proton Ertiga (MPV)')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 170</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Proton Ertiga (MPV)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1703,15 +1812,15 @@
                 <!-- 11. Toyota Avanza (MPV) -->
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Familia MPV</span>
+                        <span class="car-tag-badge" data-i18n="tag_family_mpv">Familia MPV</span>
                         <img src="images/avanza.png" alt="Toyota Avanza">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
                         <h3 class="car-name">Avanza MPV</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 200</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Avanza (MPV)')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 200</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Avanza (MPV)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1719,15 +1828,15 @@
                 <!-- 12. Proton Saga (FLX) -->
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Ekonomi</span>
+                        <span class="car-tag-badge" data-i18n="tag_economy">Ekonomi</span>
                         <img src="images/flx.png" alt="Proton Saga">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
                         <h3 class="car-name">Saga FLX</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 120</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Proton Saga (FLX)')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 120</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Proton Saga (FLX)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1735,15 +1844,15 @@
                 <!-- 13. Proton Exora (MPV) -->
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">MPV Besar</span>
+                        <span class="car-tag-badge" data-i18n="tag_large_mpv">MPV Besar</span>
                         <img src="images/exora.png" alt="Proton Exora">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
                         <h3 class="car-name">Exora MPV</h3>
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 220</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Proton Exora (MPV)')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 220</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Proton Exora (MPV)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1751,7 +1860,7 @@
                 <!-- 14. Proton X-70 -->
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">SUV Premium</span>
+                        <span class="car-tag-badge" data-i18n="tag_premium_suv">SUV Premium</span>
                         <img src="images/x70.png" alt="Proton X-70">
                     </div>
                     <div class="car-content">
@@ -1759,8 +1868,8 @@
                         <h3 class="car-name">X-70 SUV</h3>
                        
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 270</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Proton X-70')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 270</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Proton X-70')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1768,7 +1877,7 @@
                 <!-- 15. Toyota Hilux (4x4) -->
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">4x4 Heavy Duty</span>
+                        <span class="car-tag-badge" data-i18n="tag_4x4_heavy_duty">4x4 Heavy Duty</span>
                         <img src="images/hilux.png" alt="Toyota Hilux">
                     </div>
                     <div class="car-content">
@@ -1776,8 +1885,8 @@
                         <h3 class="car-name">Hilux 4x4</h3>
                        
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 400</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Hilux (4x4)')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 400</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Hilux (4x4)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1785,7 +1894,7 @@
                 <!-- 16. Toyota Vios (New) -->
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">New Model</span>
+                        <span class="car-tag-badge" data-i18n="tag_new_model">New Model</span>
                         <img src="images/vios.png" alt="Toyota Vios">
                     </div>
                     <div class="car-content">
@@ -1793,8 +1902,8 @@
                         <h3 class="car-name">Vios New</h3>
                        
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 170</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Vios (New)')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 170</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Vios (New)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1802,7 +1911,7 @@
                 <!-- 17. Toyota Vellfire -->
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">VIP Luxury</span>
+                        <span class="car-tag-badge" data-i18n="tag_vip_luxury">VIP Luxury</span>
                         <img src="images/vellfire.png" alt="Toyota Vellfire">
                     </div>
                     <div class="car-content">
@@ -1810,8 +1919,8 @@
                         <h3 class="car-name">Vellfire Luxury</h3>
                        
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 800</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Vellfire')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 800</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Vellfire')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
@@ -1819,7 +1928,7 @@
                 <!-- 18. Toyota Hiace -->
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">VIP Luxury</span>
+                        <span class="car-tag-badge" data-i18n="tag_vip_luxury">VIP Luxury</span>
                         <img src="images/hiace.png" alt="Toyota Hiace">
                     </div>
                     <div class="car-content">
@@ -1827,47 +1936,46 @@
                         <h3 class="car-name">Hiace</h3>
                        
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 450</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Vellfire')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 450</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Hiace (4x4)')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 18. Starex Royale -->
+                <!-- 19. Starex Royale -->
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">VIP Luxury</span>
-                        <img src="images/starex.png" alt="Toyota Hiace">
+                        <span class="car-tag-badge" data-i18n="tag_vip_luxury">VIP Luxury</span>
+                        <img src="images/starex.png" alt="Hyundai Starex">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Hyundai</span>
                         <h3 class="car-name">Starex Royale</h3>
                        
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 450</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Vellfire')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 450</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Hyundai Starex')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 19. Toyota Corolla -->
-                <div class="car-card" data-category="mpv">
+                <!-- 20. Toyota Corolla -->
+                <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
-                        <span class="car-tag-badge">Sedan</span>
-                        <img src="images/corolla.png" alt="Toyota Hiace">
+                        <span class="car-tag-badge" data-i18n="filter_sedan">Sedan</span>
+                        <img src="images/corolla.png" alt="Toyota Corolla">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
                         <h3 class="car-name">Corolla</h3>
                        
                         <div class="car-footer">
-                            <div class="price-display"><span class="price-num">RM 270</span><span class="price-unit">/ hari</span></div>
-                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Vellfire')">Tempah</button>
+                            <div class="price-display"><span class="price-num">RM 270</span><span class="price-unit" data-i18n="unit_per_day">/ hari</span></div>
+                            <button class="btn-select-car" onclick="quickSelectCar('Toyota Corolla')" data-i18n="btn_book">Tempah</button>
                         </div>
                     </div>
                 </div>
-</div>
-            
+
             </div>
         </div>
     </section>
@@ -1897,7 +2005,7 @@
                     <div class="stars-gold">
                         ★★★★★
                     </div>
-                    <span class="total-reviews">(48 Ulasan)</span>
+                    <span class="total-reviews" data-i18n="google_total_reviews">(48 Ulasan)</span>
                 </div>
             </div>
         </div>
@@ -2023,12 +2131,75 @@
                     <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
                     <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                 </svg>
-                <span>Lihat Semua 48 Ulasan di Google</span>
+                <span data-i18n="btn_google_reviews">Lihat Semua 48 Ulasan di Google</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
         </div>
 
     </div>
+</section>
+
+<!-- Section Gambar Pelanggan -->
+<section id="image" class="customer-gallery-section">
+  <div class="gallery-container">
+                <span class="section-tag" data-i18n="gallery_tag">Galeri</span>
+    <h2 data-i18n="image_title">Gambar Pelanggan</h2>
+    <p data-i18n="image_subtitle">Koleksi kenangan dan testimoni gambar bersama pelanggan kami.</p>
+
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev-btn" id="galleryPrevBtn" aria-label="Previous">&lt;</button>
+
+      <div class="carousel-track" id="galleryTrack">
+        <!-- Kad Gambar 1 -->
+        <div class="carousel-card">
+          <img src="images/s1.jpg" alt="Pelanggan 1">
+        </div>
+
+        <!-- Kad Gambar 2 -->
+        <div class="carousel-card">
+          <img src="images/s2.jpg" alt="Pelanggan 2">
+        </div>
+
+        <!-- Kad Gambar 3 -->
+        <div class="carousel-card">
+          <img src="images/s3.jpg" alt="Pelanggan 3">
+        </div>
+
+        <!-- Kad Gambar 4 -->
+        <div class="carousel-card">
+          <img src="images/s4.jpg" alt="Pelanggan 4">
+        </div>
+
+                <!-- Kad Gambar 5 -->
+        <div class="carousel-card">
+          <img src="images/s5.jpg" alt="Pelanggan 5">
+        </div>
+
+                <!-- Kad Gambar 6 -->
+        <div class="carousel-card">
+          <img src="images/s6.jpg" alt="Pelanggan 6">
+        </div>
+
+                <!-- Kad Gambar 7 -->
+        <div class="carousel-card">
+          <img src="images/s7.jpg" alt="Pelanggan 7">
+        </div>
+
+                <!-- Kad Gambar 8 -->
+        <div class="carousel-card">
+          <img src="images/s8.jpg" alt="Pelanggan 8">
+        </div>
+
+                <!-- Kad Gambar 9 -->
+        <div class="carousel-card">
+          <img src="images/s9.jpg" alt="Pelanggan 9">
+        </div>
+
+      </div>
+
+      <button class="carousel-btn next-btn" id="galleryNextBtn" aria-label="Next">&gt;</button>
+    </div>
+  </div>
 </section>
 
 <!-- CTA BANNER SECTION -->
@@ -2037,18 +2208,18 @@
         <div class="cta-card">
             <div class="cta-badge">
             </div>
-            <h2 class="cta-title">Bersedia Untuk Meneroka Penang Hari Ini?</h2>
-            <p class="cta-description">
+            <h2 class="cta-title" data-i18n="cta_title">Bersedia Untuk Meneroka Penang Hari Ini?</h2>
+            <p class="cta-description" data-i18n="cta_desc">
                 Nikmati pemanduan selesa dengan kereta sewa bersih, harga berpatutan, dan penghantaran percuma ke Penang International Airport (PIA).
             </p>
             <div class="cta-actions">
                 <a href="https://wa.me/60105606211?text=Salam%20Anuar,%20saya%20nak%20tempah%20kereta%20sewa" target="_blank" class="btn-cta-whatsapp">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <span>Tempah Sekarang via WhatsApp</span>
+                    <span data-i18n="cta_btn_wa">Tempah Sekarang via WhatsApp</span>
                 </a>
                 <a href="#fleet" class="btn-cta-secondary">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
-                    <span>Lihat Katalog Kereta</span>
+                    <span data-i18n="cta_btn_fleet">Lihat Katalog Kereta</span>
                 </a>
             </div>
         </div>
@@ -2070,8 +2241,8 @@
                 <div class="brand-header" style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(0, 0, 0, 0.08);">
                     <img src="images/logo anuar.png" alt="Anuar & Group" style="width: 60px; height: 60px; border-radius: 10px; object-fit: contain; background: rgba(0,0,0,0.03); padding: 2px;">
                     <div>
-                        <h4 style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-heading); line-height: 1.2;">Anuar & Group</h4>
-                        <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">Kereta Sewa Penang • KOI Partner</span>
+                        <h4 style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-heading); line-height: 1.2;">Anuar & Group Sdn Bhd</h4>
+                        <span data-i18n="footer_brand" style="font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">Kereta Sewa Penang</span>
                     </div>
                 </div>
 
@@ -2082,7 +2253,7 @@
                     </div>
                     <div>
                         <h5 style="color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase;" data-i18n="addr_title">Alamat Utama</h5>
-                        <p style="font-weight: 700; color: var(--text-heading); font-size: 0.9rem; margin-top: 2px;">Lapangan Terbang Antarabangsa Pulau Pinang, 11900 Bayan Lepas, Penang</p>
+                        <p style="font-weight: 700; color: var(--text-heading); font-size: 0.9rem; margin-top: 2px;" data-i18n="addr_detail">Lapangan Terbang Antarabangsa Pulau Pinang, 11900 Bayan Lepas, Penang</p>
                     </div>
                 </div>
 
@@ -2105,11 +2276,11 @@
                     </div>
                     <div>
                         <h5 style="color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase;" data-i18n="hours_title">Waktu Operasi</h5>
-                        <p style="font-weight: 700; color: var(--text-heading); font-size: 0.9rem; margin-top: 2px;">8:00 AM – 10:00 PM (Isnin – Ahad)</p>
+                        <p style="font-weight: 700; color: var(--text-heading); font-size: 0.9rem; margin-top: 2px;" data-i18n="hours_detail">8:00 AM – 10:00 PM (Isnin – Ahad)</p>
                     </div>
                 </div>
 
-                <!-- MEDIA SOSIAL (PENAMBAHAN BAHARU) -->
+                <!-- MEDIA SOSIAL -->
                 <div class="info-row">
                     <div class="info-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
@@ -2143,8 +2314,8 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p><strong>Anuar & Group Sdn Bhd</strong> • Kereta Sewa Penang 2026</p>
-            <p style="margin-top: 4px;">&copy; 2026 Hak Cipta Terpelihara.</p>
+            <p><strong>Anuar & Group Sdn Bhd</strong> • <span data-i18n="footer_tagline">Kereta Sewa Penang 2026</span></p>
+            <p style="margin-top: 4px;" data-i18n="footer_rights">&copy; 2026 Hak Cipta Terpelihara.</p>
         </div>
     </footer>
 
@@ -2160,128 +2331,182 @@ const i18nData = {
     ms: {
         // --- NAVBAR ---
         nav_home: "Utama",
-        nav_fleet: "Armada Kereta",
-        nav_features: "Kelebihan",
+        nav_fleet: "Senarai Kereta",
         nav_reviews: "Testimoni",
-        nav_faq: "Soalan Lazim",
-        nav_contact: "Hubungi Kami",
-        nav_book_now: "Tempah Sekarang",
+        nav_contact: "Hubungi",
+        nav_whatsapp: "WhatsApp",
 
         // --- HERO SECTION ---
-        hero_title: 'Sewa Kereta <span class="highlight-blue">Penang</span> Murah & Selesa',
-        hero_subtitle: "Nikmati perjalanan tanpa renyah dengan armada kereta bersih, diselenggara rapi, dan perkhidmatan penghantaran 24 jam.",
-        hero_btn_primary: "Lihat Kereta",
-        hero_btn_whatsapp: "Sewa Menerusi WhatsApp",
+        hero_title: 'SEWA KERETA DENGAN HARGA <br><span class="highlight-blue">STUDENT!</span>',
+        hero_subtitle: "Sewa kereta murah dan berbaloi di Pulau Pinang. Nikmati perjalanan selesa dengan tempahan pantas dan kenderaan bersih.",
+        feat_badge_1_title: "HARGA",
+        feat_badge_1_sub: "MURAH",
+        feat_badge_2_title: "KERETA",
+        feat_badge_2_sub: "TERBAIK",
+        feat_badge_3_title: "SERVIS",
+        feat_badge_3_sub: "TERBAIK",
+
+        // --- BOOKING FORM / CARI KERETA ---
+        calc_title: "CARI & TEMPAH KERETA",
+        calc_subtitle: "Mudah • Pantas • Selamat",
+        lbl_car: "Pilih Kereta",
+        lbl_start: "Tarikh Ambil",
+        lbl_end: "Tarikh Hantar",
+        lbl_name: "Nama Penuh",
+        ph_name: "Nama Anda",
+        btn_submit: "CARI KERETA",
 
         // --- FILTER & CAR FLEET ---
-        fleet_title: "Pilihan Armada Kereta Kami",
-        fleet_subtitle: "Pilih kenderaan yang sesuai dengan keperluan dan bajet anda.",
-        filter_all: "Semua Model",
+        fleet_tag: "Senarai Kereta",
+        fleet_title: "Katalog & Kadar Harga Kereta",
+        filter_all: "Semua Model (20)",
         filter_compact: "Compact & Hatchback",
         filter_sedan: "Sedan",
         filter_mpv: "MPV & SUV",
         filter_luxury: "Mewah & 4x4",
 
         // --- CAR CARD / SPECS ---
-        card_per_day: "/ hari",
-        card_seats: "Kerusi",
-        card_transmission: "Auto",
-        card_fuel: "Petronas/Shell",
-        card_btn_book: "Tempah Kereta Ini",
-        btn_load_more: "Lihat Banyak Lagi",
-
-        // --- FEATURES / KELEBIHAN ---
-        features_title: "Kenapa Pilih Perkhidmatan Kami?",
-        feat_1_title: "Harga Tanpa Cas Tersembunyi",
-        feat_1_desc: "Kadar sewaan yang telus. Apa yang anda lihat, itu yang anda bayar.",
-        feat_2_title: "Penghantaran Ke Lokasi",
-        feat_2_desc: "Kami hantar terus ke Lapangan Terbang Penang, Stesen Komuter, atau Hotel anda.",
-        feat_3_title: "Kereta Bersih & Diselenggara",
-        feat_3_desc: "Setiap kenderaan dibersihkan dan diservis berkala demi keselamatan anda.",
-        feat_4_title: "Bantuan Bantuan 24/7",
-        feat_4_desc: "Pasukan sokongan kami sentiasa sedia membantu anda pada bila-bila masa.",
-
-        // --- BOOKING FORM / CARI KERETA ---
-        form_title: "Semak Ketersediaan Kereta",
-        form_pickup_loc: "Lokasi Ambil",
-        form_dropoff_loc: "Lokasi Pulang",
-        form_pickup_date: "Tarikh Ambil",
-        form_return_date: "Tarikh Pulang",
-        form_car_type: "Jenis Kereta",
-        form_submit_btn: "Cari Kereta Sekarang",
+        unit_per_day: "/ hari",
+        btn_book: "Tempah",
+        tag_most_economical: "Paling Jimat",
+        tag_best_seller: "Paling Laris",
+        tag_top_choice: "Pilihan Utama",
+        tag_spacious_boot: "Bonet Luas",
+        tag_7_seater: "7 Seater",
+        tag_suv_mpv: "SUV / MPV",
+        tag_comfortable_sedan: "Sedan Selesa",
+        tag_popular_choice: "Popular Choice",
+        tag_fuel_efficient: "Jimat Minyak",
+        tag_6_seater: "6 Seater",
+        tag_family_mpv: "Familia MPV",
+        tag_economy: "Ekonomi",
+        tag_large_mpv: "MPV Besar",
+        tag_premium_suv: "SUV Premium",
+        tag_4x4_heavy_duty: "4x4 Heavy Duty",
+        tag_new_model: "New Model",
+        tag_vip_luxury: "VIP Luxury",
 
         // --- TESTIMONIALS ---
-        reviews_title: "Apa Kata Pelanggan Kami",
-        reviews_subtitle: "Ribuan pelanggan gembira telah menggunakan perkhidmatan sewa kereta kami.",
+        reviews_tag: "Testimoni",
+        reviews_title: "Pengalaman Pelanggan Kami",
+        google_total_reviews: "(48 Ulasan)",
+        btn_google_reviews: "Lihat Semua 48 Ulasan di Google",
+
+        // --- GALERI --- //
+        gallery_tag: "Galeri",
+         image_title: "Galeri Pelanggan",
+       image_subtitle: "Koleksi kenangan dan pengalaman bersama pelanggan kami.",
+    
+        // --- CTA BANNER ---
+        cta_title: "Bersedia Untuk Meneroka Penang Hari Ini?",
+        cta_desc: "Nikmati pemanduan selesa dengan kereta sewa bersih, harga berpatutan, dan penghantaran percuma ke Penang International Airport (PIA).",
+        cta_btn_wa: "Tempah Sekarang via WhatsApp",
+        cta_btn_fleet: "Lihat Katalog Kereta",
+
+        // --- CONTACT ---
+        contact_tag: "Hubungi Kami",
+        contact_title: "Lokasi & Talian Khidmat",
+        addr_title: "Alamat Utama",
+        addr_detail: "Lapangan Terbang Antarabangsa Pulau Pinang, 11900 Bayan Lepas, Penang",
+        phone_title: "Hotline Direct",
+        hours_title: "Waktu Operasi",
+        hours_detail: "8:00 AM – 10:00 PM (Isnin – Ahad)",
+        social_title: "Ikuti Kami",
 
         // --- FOOTER ---
-        footer_about: "Penyedia perkhidmatan sewa kereta terkemuka di Penang. Menawarkan pelbagai jenis kenderaan pada harga bajet dan mesra mesra pengguna.",
-        footer_quick_links: "Pautan Pantas",
-        footer_contact_info: "Maklumat Perhubungan",
-        footer_rights: "Hak Cipta Terpelihara."
+        footer_brand: "Kereta Sewa Penang",
+        footer_tagline: "Kereta Sewa Penang 2026",
+        footer_rights: "&copy; 2026 Hak Cipta Terpelihara."
     },
     en: {
         // --- NAVBAR ---
         nav_home: "Home",
         nav_fleet: "Car Fleet",
-        nav_features: "Features",
         nav_reviews: "Reviews",
-        nav_faq: "FAQ",
-        nav_contact: "Contact Us",
-        nav_book_now: "Book Now",
+        nav_contact: "Contact",
+        nav_whatsapp: "WhatsApp",
 
         // --- HERO SECTION ---
-        hero_title: 'Best & Affordable <span class="highlight-blue">Penang</span> Car Rental',
-        hero_subtitle: "Enjoy a hassle-free journey with clean, well-maintained cars and 24/7 delivery services.",
-        hero_btn_primary: "View All Cars",
-        hero_btn_whatsapp: "Book via WhatsApp",
+        hero_title: 'RENT A CAR AT <br><span class="highlight-blue">STUDENT RATES!</span>',
+        hero_subtitle: "Affordable and great value car rental in Penang. Enjoy a comfortable journey with quick booking and clean vehicles.",
+        feat_badge_1_title: "BEST",
+        feat_badge_1_sub: "PRICES",
+        feat_badge_2_title: "BEST",
+        feat_badge_2_sub: "CARS",
+        feat_badge_3_title: "BEST",
+        feat_badge_3_sub: "SERVICE",
+
+        // --- BOOKING FORM ---
+        calc_title: "SEARCH & BOOK CAR",
+        calc_subtitle: "Easy • Fast • Secure",
+        lbl_car: "Select Car",
+        lbl_start: "Pickup Date",
+        lbl_end: "Return Date",
+        lbl_name: "Full Name",
+        ph_name: "Your Name",
+        btn_submit: "SEARCH CAR",
 
         // --- FILTER & CAR FLEET ---
-        fleet_title: "Our Car Fleet",
-        fleet_subtitle: "Choose the perfect vehicle suited for your needs and budget.",
-        filter_all: "All Models",
+        fleet_tag: "Car Fleet",
+        fleet_title: "Catalogue & Price Rates",
+        filter_all: "All Models (20)",
         filter_compact: "Compact & Hatchback",
         filter_sedan: "Sedan",
         filter_mpv: "MPV & SUV",
         filter_luxury: "Luxury & 4x4",
 
         // --- CAR CARD / SPECS ---
-        card_per_day: "/ day",
-        card_seats: "Seats",
-        card_transmission: "Auto",
-        card_fuel: "Petrol",
-        card_btn_book: "Book This Car",
-        btn_load_more: "Load More",
-
-        // --- FEATURES ---
-        features_title: "Why Choose Us?",
-        feat_1_title: "No Hidden Charges",
-        feat_1_desc: "Transparent rental rates. What you see is what you pay.",
-        feat_2_title: "Doorstep Delivery",
-        feat_2_desc: "We deliver directly to Penang Airport, Train Station, or your Hotel.",
-        feat_3_title: "Clean & Well-Maintained",
-        feat_3_desc: "Every vehicle is sanitized and regularly serviced for your safety.",
-        feat_4_title: "24/7 Roadside Support",
-        feat_4_desc: "Our dedicated support team is always ready to assist you anytime.",
-
-        // --- BOOKING FORM ---
-        form_title: "Check Car Availability",
-        form_pickup_loc: "Pickup Location",
-        form_dropoff_loc: "Dropoff Location",
-        form_pickup_date: "Pickup Date",
-        form_return_date: "Return Date",
-        form_car_type: "Car Type",
-        form_submit_btn: "Search Cars Now",
+        unit_per_day: "/ day",
+        btn_book: "Book Now",
+        tag_most_economical: "Most Savings",
+        tag_best_seller: "Best Seller",
+        tag_top_choice: "Top Choice",
+        tag_spacious_boot: "Spacious Boot",
+        tag_7_seater: "7 Seater",
+        tag_suv_mpv: "SUV / MPV",
+        tag_comfortable_sedan: "Comfy Sedan",
+        tag_popular_choice: "Popular Choice",
+        tag_fuel_efficient: "Fuel Efficient",
+        tag_6_seater: "6 Seater",
+        tag_family_mpv: "Family MPV",
+        tag_economy: "Economy",
+        tag_large_mpv: "Large MPV",
+        tag_premium_suv: "Premium SUV",
+        tag_4x4_heavy_duty: "4x4 Heavy Duty",
+        tag_new_model: "New Model",
+        tag_vip_luxury: "VIP Luxury",
 
         // --- TESTIMONIALS ---
-        reviews_title: "What Our Customers Say",
-        reviews_subtitle: "Thousands of happy drivers trust our rental services in Penang.",
+        reviews_tag: "Testimonials",
+        reviews_title: "Our Customer Experiences",
+        google_total_reviews: "(48 Reviews)",
+        btn_google_reviews: "See All 48 Reviews on Google",
+
+        // --- GALLERY --- //
+        gallery_tag: "Gallery",
+       image_title: "Customer Gallery",
+     image_subtitle: "A collection of memories and experiences with our clients.",
+
+        // --- CTA BANNER ---
+        cta_title: "Ready to Explore Penang Today?",
+        cta_desc: "Enjoy a comfortable drive with clean rental cars, affordable rates, and free delivery to Penang International Airport (PIA).",
+        cta_btn_wa: "Book Now via WhatsApp",
+        cta_btn_fleet: "View Car Catalogue",
+
+        // --- CONTACT ---
+        contact_tag: "Contact Us",
+        contact_title: "Location & Service Lines",
+        addr_title: "Main Address",
+        addr_detail: "Penang International Airport, 11900 Bayan Lepas, Penang",
+        phone_title: "Direct Hotline",
+        hours_title: "Operating Hours",
+        hours_detail: "8:00 AM – 10:00 PM (Monday – Sunday)",
+        social_title: "Follow Us",
 
         // --- FOOTER ---
-        footer_about: "Leading car rental provider in Penang. Offering a wide range of budget-friendly and quality vehicles.",
-        footer_quick_links: "Quick Links",
-        footer_contact_info: "Contact Info",
-        footer_rights: "All Rights Reserved."
+        footer_brand: "Penang Car Rental",
+        footer_tagline: "Penang Car Rental 2026",
+        footer_rights: "&copy; 2026 All Rights Reserved."
     }
 };
         let currentLang = 'ms';
@@ -2290,17 +2515,26 @@ const i18nData = {
             currentLang = currentLang === 'ms' ? 'en' : 'ms';
             document.getElementById('langText').innerText = currentLang === 'ms' ? 'EN' : 'BM';
             
+            // Kemaskini teks HTML bagi elemen berdaftar
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (i18nData[currentLang][key]) {
+                if (i18nData[currentLang] && i18nData[currentLang][key]) {
                     el.innerHTML = i18nData[currentLang][key];
+                }
+            });
+
+            // Kemaskini placeholder input berdaftar
+            document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+                const key = el.getAttribute('data-i18n-ph');
+                if (i18nData[currentLang] && i18nData[currentLang][key]) {
+                    el.setAttribute('placeholder', i18nData[currentLang][key]);
                 }
             });
 
             calculatePrice();
         }
 
-        // 2. TOGGLE LIGHT / DARK MODE (WITH SVG ICONS)
+        // 2. TOGGLE LIGHT / DARK MODE
         const moonIconSVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`;
         const sunIconSVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>`;
 
@@ -2326,14 +2560,12 @@ const i18nData = {
         const tomorrow = new Date(today);
         tomorrow.setDate(tomorrow.getDate() + 1);
 
-        startDateInput.value = today.toISOString().split('T')[0];
-        endDateInput.value = tomorrow.toISOString().split('T')[0];
+        if (startDateInput) startDateInput.value = today.toISOString().split('T')[0];
+        if (endDateInput) endDateInput.value = tomorrow.toISOString().split('T')[0];
 
         // 4. CALCULATOR LOGIC
-// 4. CALCULATOR LOGIC
 function calculatePrice() {
     const carSelect = document.getElementById('carSelect');
-    // Pastikan ID ini sama dengan id input tarikh anda
     const startDateInput = document.getElementById('startDate'); 
     const endDateInput = document.getElementById('endDate');
 
@@ -2346,16 +2578,13 @@ function calculatePrice() {
     const r7 = parseFloat(selectedOpt.getAttribute('data-r7')) || r3;
     const r14 = parseFloat(selectedOpt.getAttribute('data-r14')) || r7;
 
-    // Fungsi khas untuk parse format tarikh MM/DD/YYYY atau YYYY-MM-DD dengan selamat
     function safeParseDate(dateVal) {
         if (!dateVal) return null;
         if (dateVal instanceof Date) return dateVal;
         
-        // Jika format string MM/DD/YYYY atau DD/MM/YYYY
         if (typeof dateVal === 'string' && dateVal.includes('/')) {
             const parts = dateVal.split('/');
             if (parts.length === 3) {
-                // Parse mengikut MM/DD/YYYY (08/13/2026 -> Month 8, Day 13, Year 2026)
                 const m = parseInt(parts[0], 10) - 1;
                 const d = parseInt(parts[1], 10);
                 const y = parseInt(parts[2], 10);
@@ -2375,37 +2604,41 @@ function calculatePrice() {
         days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     }
 
-    // Tentukan Kadar Harian ikut Tier
     let dailyRate = r1;
-    let tierText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? "*Kadar Standard (1-2 Hari)" : "*Standard Rate (1-2 Days)";
+    let tierText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? "Kadar Standard (1-2 Hari)" : "Standard Rate (1-2 Days)";
 
     if (days >= 14) {
         dailyRate = r14;
-        tierText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? "*Kadar Diskaun 14+ Hari" : "*Discount Rate 14+ Days";
+        tierText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? "Kadar Diskaun 14+ Hari" : "Discount Rate 14+ Days";
     } else if (days >= 7) {
         dailyRate = r7;
-        tierText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? "*Kadar Diskaun 7+ Hari" : "*Discount Rate 7+ Days";
+        tierText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? "Kadar Diskaun 7+ Hari" : "Discount Rate 7+ Days";
     } else if (days >= 3) {
         dailyRate = r3;
-        tierText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? "*Kadar Diskaun 3+ Hari" : "*Discount Rate 3+ Days";
+        tierText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? "Kadar Diskaun 3+ Hari" : "Discount Rate 3+ Days";
     }
 
-    // Jumlah Keseluruhan (Kadar Harian x Bilangan Hari)
     const totalPrice = dailyRate * days;
 
-    // Kemaskini Paparan UI
     const daysLabel = document.getElementById('daysLabel');
     const rateTierBadge = document.getElementById('rateTierBadge');
     const totalPriceDisplay = document.getElementById('totalPriceDisplay');
 
+    const dayText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? 'Hari' : 'Days';
+    const perDayText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? '/hari' : '/day';
+
     if (daysLabel) {
-        daysLabel.innerText = (typeof currentLang !== 'undefined' && currentLang === 'ms') ? `Tempoh: ${days} Hari` : `Duration: ${days} Days`;
+        daysLabel.innerHTML = (typeof currentLang !== 'undefined' && currentLang === 'ms') 
+            ? `Tempoh: ${days} ${dayText} (<span id="rateTierBadge">${tierText}</span>)` 
+            : `Duration: ${days} ${dayText} (<span id="rateTierBadge">${tierText}</span>)`;
     }
-    if (rateTierBadge) {
-        rateTierBadge.innerText = `${tierText} (RM ${dailyRate}/hari)`;
+    
+    const updatedBadge = document.getElementById('rateTierBadge');
+    if (updatedBadge) {
+        updatedBadge.innerText = `${tierText} (RM ${dailyRate}${perDayText})`;
     }
+
     if (totalPriceDisplay) {
-        // Paparkan Jumlah Keseluruhan (cth: RM 900)
         totalPriceDisplay.innerText = `RM ${totalPrice}`;
     }
 }
@@ -2414,34 +2647,22 @@ function calculatePrice() {
 function quickSelectCar(carName) {
     const carSelect = document.getElementById('carSelect');
     
-    // 1. Set value terus tanpa perlu looping
     if (carSelect) {
         carSelect.value = carName;
     }
 
-    // 2. Scroll TERUS ke card borang hitam dan letak ngam-ngam kat tengah skrin
     const bookingCard = document.querySelector('.floating-booking-bar') || document.getElementById('utama');
     if (bookingCard) {
         bookingCard.scrollIntoView({ 
             behavior: 'smooth', 
-            block: 'center' // Memastikan borang hitam duduk di tengah skrin pengguna
+            block: 'center'
         });
     }
 
-    // 3. Jalankan pengiraan harga
     if (typeof calculatePrice === 'function') {
         calculatePrice();
     }
-}            const carSelect = document.getElementById('carSelect');
-            for (let i = 0; i < carSelect.options.length; i++) {
-                if (carSelect.options[i].value === carName) {
-                    carSelect.selectedIndex = i;
-                    break;
-                }
-            }
-            calculatePrice();
-            document.getElementById('utama').scrollIntoView({ behavior: 'smooth' });
-        
+}
 
         // 6. FILTER FLEET CARDS
         function filterFleet(category, event) {
@@ -2466,7 +2687,6 @@ function handleBooking(event) {
     const carSelect = document.getElementById('carSelect');
     const carName = carSelect ? carSelect.value : '';
     
-    // Dipanggil secara spesifik melalui ID
     const startDate = document.getElementById('startDate') ? document.getElementById('startDate').value : '';
     const endDate = document.getElementById('endDate') ? document.getElementById('endDate').value : '';
     const custName = document.getElementById('custName') ? document.getElementById('custName').value : '';
@@ -2502,86 +2722,16 @@ Boleh sahkan kekosongan kenderaan ini? Terima kasih!`
 
 Please confirm availability for these dates. Thank you!`;
 
-    // encodeURIComponent menukar perenggan, & dan ruang kosong kepada URL format
     const whatsappURL = `https://wa.me/60105606211?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
 }
-    const slider = document.getElementById('reviewsSlider');
-    const slideLeftBtn = document.getElementById('slideLeft');
-    const slideRightBtn = document.getElementById('slideRight');
-
-    // Slaid tepat mengikut lebar kawasan paparan (3 kad sekaligus)
-    slideRightBtn.addEventListener('click', () => {
-        slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
-    });
-
-    slideLeftBtn.addEventListener('click', () => {
-        slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-    const slider = document.getElementById('reviewsSlider');
-    const prevBtn = document.getElementById('slideLeft');
-    const nextBtn = document.getElementById('slideRight');
-
-    if (slider && prevBtn && nextBtn) {
-        // Jarak pergerakan kad (sesuai mengikut lebar kad + gap)
-        const scrollAmount = 340; 
-
-        nextBtn.addEventListener('click', () => {
-            slider.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        prevBtn.addEventListener('click', () => {
-            slider.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const carCards = document.querySelectorAll('.car-card'); 
-    const loadMoreBtn = document.getElementById('loadMoreCarsBtn');
-    const limit = 9; // Had paparan awal (9 buah kereta)
-
-    // Jika jumlah kereta 9 atau kurang, sembunyikan terus butang 'Lihat Banyak Lagi'
-    if (carCards.length <= limit) {
-        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-        return;
-    }
-
-    // 1. Sembunyikan kad dari indeks ke-9 dan ke atas (kereta ke-10 onwards)
-    carCards.forEach((card, index) => {
-        if (index >= limit) {
-            card.classList.add('hidden-car');
-        }
-    });
-
-    // 2. Event apabila butang ditekan
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function () {
-            // Paparkan semula semua kad kereta yang tersembunyi
-            carCards.forEach(card => {
-                card.classList.remove('hidden-car');
-            });
-
-            // Sembunyikan butang selepas semua kereta dah dipaparkan
-            this.style.display = 'none';
-        });
-    }
-});
 
 // 8. SLIDER & LOAD MORE INITIALIZATION
 function scrollReviews(direction) {
     const slider = document.getElementById('reviewsSlider');
     if (!slider) return;
 
-    const scrollAmount = 340; // Jarak scroll setiap kali tekan
+    const scrollAmount = 340;
 
     if (direction === 'left') {
         slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
@@ -2591,28 +2741,70 @@ function scrollReviews(direction) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Hidden car logic
+    const slider = document.getElementById('reviewsSlider');
+    const prevBtn = document.getElementById('slideLeft');
+    const nextBtn = document.getElementById('slideRight');
+
+    if (slider && prevBtn && nextBtn) {
+        const scrollAmount = 340; 
+
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    }
+
     const carCards = document.querySelectorAll('.car-card'); 
     const loadMoreBtn = document.getElementById('loadMoreCarsBtn');
     const limit = 9;
 
     if (carCards.length <= limit) {
         if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-        return;
-    }
-
-    carCards.forEach((card, index) => {
-        if (index >= limit) {
-            card.classList.add('hidden-car');
-        }
-    });
-
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function () {
-            carCards.forEach(card => card.classList.remove('hidden-car'));
-            this.style.display = 'none';
+    } else {
+        carCards.forEach((card, index) => {
+            if (index >= limit) {
+                card.classList.add('hidden-car');
+            }
         });
+
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', function () {
+                carCards.forEach(card => card.classList.remove('hidden-car'));
+                this.style.display = 'none';
+            });
+        }
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("galleryTrack");
+  const prevBtn = document.getElementById("galleryPrevBtn");
+  const nextBtn = document.getElementById("galleryNextBtn");
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  // Jarak pergerakan scroll mengikut lebar kad
+  const getScrollAmount = () => {
+    const card = track.querySelector(".carousel-card");
+    return card ? card.offsetWidth + 24 : 300; // 24px adalah nilai gap CSS
+  };
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollBy({
+      left: getScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollBy({
+      left: -getScrollAmount(),
+      behavior: "smooth"
+    });
+  });
 });
     </script>
 </body>
