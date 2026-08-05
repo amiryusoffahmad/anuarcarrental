@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuar & Group Sdn Bhd | Kereta Sewa Penang 2026</title>
+    <title>Anuar & Group Sdn Bhd | Kereta Sewa Penang 2026 Murah & Terbaik</title>
+    <meta name="description" content="Perkhidmatan kereta sewa murah di Penang, Pulau Pinang. Pilihan kenderaan MPV, sedan dan compact bajet student dengan servis penghantaran terbaik di Lapangan Terbang Penang (PIA).">
+    <meta name="keywords" content="kereta sewa penang, sewa kereta murah penang, kereta sewa bayan lepas, car rental penang airport, anuar & group sdn bhd">
+    <link rel="canonical" href="https://www.anuarcarrentalpenang.com/">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anuar & Group Sdn Bhd | Kereta Sewa Penang 2026">
+    <meta property="og:description" content="Sewa kereta murah dan berbaloi di Pulau Pinang. Nikmati perjalanan selesa dengan tempahan pantas dan kenderaan bersih.">
+    <meta property="og:locale" content="ms_MY">
+
     <link rel="icon" type="image/png" href="images/logo anuar1.png">
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +28,7 @@
         <div class="container">
             <header class="navbar">
                 <a href="#" class="brand-logo">
-                    <img src="images/logo anuar.png" alt="Logo Anuar" class="logo-img">                    
+                    <img src="images/logo anuar.png" alt="Logo Anuar & Group Kereta Sewa Penang" class="logo-img">                    
                     <div class="brand-text">
                         <h1>Anuar & Group Sdn Bhd</h1>
                     </div>
@@ -43,7 +53,7 @@
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                     </button>
 
-                    <a href="https://wa.me/60105606211" target="_blank" class="btn-whatsapp-pill">
+                    <a href="https://wa.me/60105606211" target="_blank" class="btn-whatsapp-pill" aria-label="Hubungi WhatsApp Anuar">
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         <span data-i18n="nav_whatsapp">WhatsApp</span>
                     </a>
@@ -61,10 +71,10 @@
             
             <!-- Left Content: Headings & Features -->
             <div class="hero-text-content">
-                <h1 class="hero-title" data-i18n="hero_title">
+                <h2 class="hero-title" data-i18n="hero_title">
                     SEWA KERETA DENGAN HARGA <br>
                     <span class="highlight-blue">STUDENT!</span>
-                </h1>
+                </h2>
                 <p class="hero-subtitle" data-i18n="hero_subtitle">
                     Sewa kereta murah dan berbaloi di Pulau Pinang. Nikmati perjalanan selesa dengan tempahan pantas dan kenderaan bersih.
                 </p>
@@ -105,7 +115,7 @@
 
             <!-- Right Visual: Floating Car Image -->
             <div class="hero-visual-wrapper">
-                <img src="images/bezza.png" alt="Kereta Sewa Penang Student" class="hero-car-img">
+                <img src="images/bezza.png" alt="Kereta Sewa Penang Student - Perodua Bezza" class="hero-car-img">
             </div>
 
         </div>
@@ -138,7 +148,7 @@
                     
                     <!-- 1. Car Selection -->
                     <div class="form-group-item">
-                        <label class="form-label" data-i18n="lbl_car">Pilih Kereta</label>
+                        <label class="form-label" for="carSelect" data-i18n="lbl_car">Pilih Kereta</label>
 <select class="form-control-custom" id="carSelect" onchange="calculatePrice()">
     <option value="Perodua Viva" data-r1="100" data-r3="90" data-r7="80" data-r14="65">Perodua Viva</option>
     <option value="Perodua Axia" data-r1="120" data-r3="110" data-r7="100" data-r14="80" selected>Perodua Axia</option>
@@ -166,19 +176,19 @@
 
                     <!-- 2. Start Date -->
                     <div class="form-group-item">
-                        <label class="form-label" data-i18n="lbl_start">Tarikh Ambil</label>
+                        <label class="form-label" for="startDate" data-i18n="lbl_start">Tarikh Ambil</label>
                         <input type="date" class="form-control-custom" id="startDate" onchange="calculatePrice()" required>
                     </div>
 
                     <!-- 3. End Date -->
                     <div class="form-group-item">
-                        <label class="form-label" data-i18n="lbl_end">Tarikh Hantar</label>
+                        <label class="form-label" for="endDate" data-i18n="lbl_end">Tarikh Hantar</label>
                         <input type="date" class="form-control-custom" id="endDate" onchange="calculatePrice()" required>
                     </div>
 
                     <!-- 4. Customer Name -->
                     <div class="form-group-item">
-                        <label class="form-label" data-i18n="lbl_name">Nama Penuh</label>
+                        <label class="form-label" for="custName" data-i18n="lbl_name">Nama Penuh</label>
                         <input type="text" class="form-control-custom" id="custName" placeholder="Nama Anda" data-i18n-ph="ph_name" required>
                     </div>
 
@@ -220,7 +230,7 @@
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_most_economical">Paling Jimat</span>
-                        <img src="images/viva.png" alt="Perodua Viva">
+                        <img src="images/viva.png" alt="Sewa Perodua Viva Murah Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -236,7 +246,7 @@
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_best_seller">Paling Laris</span>
-                        <img src="images/axia.png" alt="Perodua Axia">
+                        <img src="images/axia.png" alt="Sewa Perodua Axia Murah Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -252,7 +262,7 @@
                 <div class="car-card" data-category="compact">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_top_choice">Pilihan Utama</span>
-                        <img src="images/myvi.png" alt="Perodua Myvi">
+                        <img src="images/myvi.png" alt="Sewa Perodua Myvi Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -268,7 +278,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_spacious_boot">Bonet Luas</span>
-                        <img src="images/1.png" alt="Perodua Bezza">
+                        <img src="images/1.png" alt="Sewa Perodua Bezza Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -284,7 +294,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_7_seater">7 Seater</span>
-                        <img src="images/alza.png" alt="Perodua Alza">
+                        <img src="images/alza.png" alt="Sewa Perodua Alza MPV Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -300,7 +310,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_suv_mpv">SUV / MPV</span>
-                        <img src="images/aruz.png" alt="Perodua Aruz">
+                        <img src="images/aruz.png" alt="Sewa Perodua Aruz Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Perodua</span>
@@ -316,7 +326,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_comfortable_sedan">Sedan Selesa</span>
-                        <img src="images/persona.png" alt="Proton Persona">
+                        <img src="images/persona.png" alt="Sewa Proton Persona Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -333,7 +343,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_popular_choice">Popular Choice</span>
-                        <img src="images/city.png" alt="Honda City">
+                        <img src="images/city.png" alt="Sewa Honda City Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Honda</span>
@@ -349,7 +359,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_fuel_efficient">Jimat Minyak</span>
-                        <img src="images/almera.png" alt="Nissan Almera">
+                        <img src="images/almera.png" alt="Sewa Nissan Almera Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Nissan</span>
@@ -365,7 +375,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_6_seater">6 Seater</span>
-                        <img src="images/ertiga.png" alt="Proton Ertiga">
+                        <img src="images/ertiga.png" alt="Sewa Proton Ertiga Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -381,7 +391,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_family_mpv">Familia MPV</span>
-                        <img src="images/avanza.png" alt="Toyota Avanza">
+                        <img src="images/avanza.png" alt="Sewa Toyota Avanza Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -397,7 +407,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_economy">Ekonomi</span>
-                        <img src="images/flx.png" alt="Proton Saga">
+                        <img src="images/flx.png" alt="Sewa Proton Saga FLX Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -413,7 +423,7 @@
                 <div class="car-card" data-category="mpv">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_large_mpv">MPV Besar</span>
-                        <img src="images/exora.png" alt="Proton Exora">
+                        <img src="images/exora.png" alt="Sewa Proton Exora MPV Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -429,7 +439,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_premium_suv">SUV Premium</span>
-                        <img src="images/x70.png" alt="Proton X-70">
+                        <img src="images/x70.png" alt="Sewa Proton X70 Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Proton</span>
@@ -446,7 +456,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_4x4_heavy_duty">4x4 Heavy Duty</span>
-                        <img src="images/hilux.png" alt="Toyota Hilux">
+                        <img src="images/hilux.png" alt="Sewa Toyota Hilux 4x4 Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -463,7 +473,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_new_model">New Model</span>
-                        <img src="images/vios.png" alt="Toyota Vios">
+                        <img src="images/vios.png" alt="Sewa Toyota Vios New Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -480,7 +490,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_vip_luxury">VIP Luxury</span>
-                        <img src="images/vellfire.png" alt="Toyota Vellfire">
+                        <img src="images/vellfire.png" alt="Sewa Toyota Vellfire Luxury Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -497,7 +507,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_vip_luxury">VIP Luxury</span>
-                        <img src="images/hiace.png" alt="Toyota Hiace">
+                        <img src="images/hiace.png" alt="Sewa Toyota Hiace Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -514,7 +524,7 @@
                 <div class="car-card" data-category="luxury">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="tag_vip_luxury">VIP Luxury</span>
-                        <img src="images/starex.png" alt="Hyundai Starex">
+                        <img src="images/starex.png" alt="Sewa Hyundai Starex Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Hyundai</span>
@@ -531,7 +541,7 @@
                 <div class="car-card" data-category="sedan">
                     <div class="car-image-container">
                         <span class="car-tag-badge" data-i18n="filter_sedan">Sedan</span>
-                        <img src="images/corolla.png" alt="Toyota Corolla">
+                        <img src="images/corolla.png" alt="Sewa Toyota Corolla Cross Penang">
                     </div>
                     <div class="car-content">
                         <span class="car-brand">Toyota</span>
@@ -720,47 +730,47 @@
       <div class="carousel-track" id="galleryTrack">
         <!-- Kad Gambar 1 -->
         <div class="carousel-card">
-          <img src="images/s1.jpg" alt="Pelanggan 1">
+          <img src="images/s1.jpg" alt="Pelanggan Kereta Sewa Penang 1">
         </div>
 
         <!-- Kad Gambar 2 -->
         <div class="carousel-card">
-          <img src="images/s2.jpg" alt="Pelanggan 2">
+          <img src="images/s2.jpg" alt="Pelanggan Kereta Sewa Penang 2">
         </div>
 
         <!-- Kad Gambar 3 -->
         <div class="carousel-card">
-          <img src="images/s3.jpg" alt="Pelanggan 3">
+          <img src="images/s3.jpg" alt="Pelanggan Kereta Sewa Penang 3">
         </div>
 
         <!-- Kad Gambar 4 -->
         <div class="carousel-card">
-          <img src="images/s4.jpg" alt="Pelanggan 4">
+          <img src="images/s4.jpg" alt="Pelanggan Kereta Sewa Penang 4">
         </div>
 
                 <!-- Kad Gambar 5 -->
         <div class="carousel-card">
-          <img src="images/s5.jpg" alt="Pelanggan 5">
+          <img src="images/s5.jpg" alt="Pelanggan Kereta Sewa Penang 5">
         </div>
 
                 <!-- Kad Gambar 6 -->
         <div class="carousel-card">
-          <img src="images/s6.jpg" alt="Pelanggan 6">
+          <img src="images/s6.jpg" alt="Pelanggan Kereta Sewa Penang 6">
         </div>
 
                 <!-- Kad Gambar 7 -->
         <div class="carousel-card">
-          <img src="images/s7.jpg" alt="Pelanggan 7">
+          <img src="images/s7.jpg" alt="Pelanggan Kereta Sewa Penang 7">
         </div>
 
                 <!-- Kad Gambar 8 -->
         <div class="carousel-card">
-          <img src="images/s8.jpg" alt="Pelanggan 8">
+          <img src="images/s8.jpg" alt="Pelanggan Kereta Sewa Penang 8">
         </div>
 
                 <!-- Kad Gambar 9 -->
         <div class="carousel-card">
-          <img src="images/s9.jpg" alt="Pelanggan 9">
+          <img src="images/s9.jpg" alt="Pelanggan Kereta Sewa Penang 9">
         </div>
 
       </div>
@@ -781,7 +791,7 @@
                 Nikmati pemanduan selesa dengan kereta sewa bersih, harga berpatutan, dan penghantaran percuma ke Penang International Airport (PIA).
             </p>
             <div class="cta-actions">
-                <a href="https://wa.me/60105606211?text=Salam%20Anuar,%20saya%20nak%20tempah%20kereta%20sewa" target="_blank" class="btn-cta-whatsapp">
+                <a href="https://wa.me/60105606211?text=Salam%20Anuar,%20saya%20nak%20tempah%20kereta%20sewa" target="_blank" class="btn-cta-whatsapp" aria-label="Tempah Kereta Sewa via WhatsApp">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     <span data-i18n="cta_btn_wa">Tempah Sekarang via WhatsApp</span>
                 </a>
@@ -807,7 +817,7 @@
                 
                 <!-- BRANDING HEADER (LOGO & NAMA SYARIKAT) -->
                 <div class="brand-header" style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(0, 0, 0, 0.08);">
-                    <img src="images/logo anuar.png" alt="Anuar & Group" style="width: 60px; height: 60px; border-radius: 10px; object-fit: contain; background: rgba(0,0,0,0.03); padding: 2px;">
+                    <img src="images/logo anuar.png" alt="Anuar & Group Sdn Bhd Logo" style="width: 60px; height: 60px; border-radius: 10px; object-fit: contain; background: rgba(0,0,0,0.03); padding: 2px;">
                     <div>
                         <h4 style="margin: 0; font-size: 1.15rem; font-weight: 700; color: var(--text-heading); line-height: 1.2;">Anuar & Group Sdn Bhd</h4>
                         <span data-i18n="footer_brand" style="font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">Kereta Sewa Penang</span>
@@ -857,13 +867,13 @@
                         <h5 style="color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase;" data-i18n="social_title">Ikuti Kami</h5>
                         <div class="social-links-container" style="display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap;">
                             <!-- Facebook -->
-                            <a href="https://www.facebook.com/share/1SuZ5g3UVP/" target="_blank" rel="noopener noreferrer" class="social-badge fb-badge">
+                            <a href="https://www.facebook.com/share/1SuZ5g3UVP/" target="_blank" rel="noopener noreferrer" class="social-badge fb-badge" aria-label="Facebook Anuar & Group">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                                 <span>Facebook</span>
                             </a>
 
                             <!-- TikTok -->
-                            <a href="https://www.tiktok.com/@keretasewamurahpenang?_r=1&_t=ZS-98STW8eo3Em" target="_blank" rel="noopener noreferrer" class="social-badge tt-badge">
+                            <a href="https://www.tiktok.com/@keretasewamurahpenang?_r=1&_t=ZS-98STW8eo3Em" target="_blank" rel="noopener noreferrer" class="social-badge tt-badge" aria-label="TikTok Anuar & Group">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.33 6.33 0 0 0 6.33-6.33V9.05a8.16 8.16 0 0 0 4.92 1.62V7.22a4.85 4.85 0 0 1-1-.53z"/></svg>
                                 <span>TikTok</span>
                             </a>
@@ -874,7 +884,7 @@
             </div>
 
             <div class="map-frame">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.786393490936!2d100.27259067409156!3d5.295995136211335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304abfe401d26e6f%3A0x2b3bdd6c4b3d8a52!2sPenang%20International%20Airport!5e0!3m2!1sen!2smy!4v1785842161525!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.786393490936!2d100.27259067409156!3d5.295995136211335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304abfe401d26e6f%3A0x2b3bdd6c4b3d8a52!2sPenang%20International%20Airport!5e0!3m2!1sen!2smy!4v1785842161525!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Lokasi Kereta Sewa Penang International Airport"></iframe>            </div>
         </div>
     </div>
 </section>
@@ -896,3 +906,4 @@
 
 </body>
 </html>
+```[cite: 6]
